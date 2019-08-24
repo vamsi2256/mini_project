@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>
+Registration Form
+</title>
+<style>
+body{
+	background:url(img1.jpg)no-repeat center fixed;
+	background-size:cover;
+}
+* { font-weight:bold; position:relative;}
+td { color:black; }
+input[type=text],input[type=number],input[type=email],input[type=password] {
+height:15px;width:150px;
+color:black; text-align:center;
+border:none;outline:none;
+background:rgba(255,255,255,0);
+border-bottom:1.5px solid black;
+} 
+#ctr { margin-top:140px;margin-left:100px; }
+
+.container {
+position:relative;
+height:300px; width:350px;
+display:inline-block;
+padding:0px 40px 0px 40px;
+margin-top:-100px;
+background-size:100% 100%;
+border-radius:15px;
+color:black;
+}
+
+#signUp:hover,#reset:hover { cursor:pointer; border:2px lighter; background-color:lighter; color:white; border-radius:15px; color:lighter;}
+
+#select {  height:30px; width:200px; text-align:center; border:none;  outline:none; background:rgba(255,255,255,0); color:green; border-bottom:1.5px solid white; cursor:pointer;}
+
+.name{ color:green; }
+
+body {
+  margin: 0;
+  font-family:courier, sans-serif;
+}
+.button {
+    background-color: #4CAF50; 
+    border: none;
+	cursor:pointer;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+	border-radius:7px;
+	
+}
+.image{
+height:50px;
+width:50px;
+}
+
+</style>
+</head>
+<body>
+<br><a href="index.html"><img class="image" src="./back.jpg"></img></a><br>
+<form action="./retrival.jsp" id="ctr" method=post name="f1" onsubmit="return validate();">
+<div  style="margin-top:-5px;background:rgba(255,255,255,0.5);border:2px solid black;border-radius:20px;display:inline-block;">
+<br>
+<table  align=center cellpadding=10 >
+<caption>
+ <div style="color:white;width:100%;background-color:black;">
+ <h1>Enter Required Blood Group</h1>  
+</div>
+
+</caption>
+
+<tr><br><td class="BLOOD" ><br>BLOOD GROUP</td>&nbsp;
+<td><br>:</td>
+          <td><br><input type = "text" list = "BLOOD" name="group" pattern="([AaBbOo]|[Aa][Bb])[\+-]" placeholder="Blood Group" required> 
+     <datalist id = "BLOOD">
+        <option value = "A+">
+        <option value = "A-">
+        <option value = "B+">
+        <option value = "B-">
+        <option value = "O+">
+         <option value = "O-">
+        <option value = "AB+">
+        <option value = "AB-">  
+      </datalist></td>  </tr>
+<tr>
+<td><br>Phone Number </td>
+<td><br>: </td>
+<td><br><input type="tel" name="pnum" pattern="[6|7|8|9]{1}[0-9]{9}" placeholder="enter your phone number" required> </td>
+</tr>
+<tr>
+<td><br>District</td>
+<td><br>: </td>
+<td> <br><input type="text" name="dst" placeholder="enter your district"> </td>
+</tr>
+<tr>
+<td><br>Pincode</td>
+<td><br>: </td>
+<td> <br><input type="text" name="pin"> </td>
+</tr>
+<tr>
+<td colspan=3 align=center>
+<input type="submit" class="button" value="Submit"> &nbsp;&nbsp;&nbsp;
+    <input type="reset" class="button"  value="Clear">&nbsp;&nbsp;&nbsp;
+	 <button class="button"  onclick="window.location.href='./index.html'">logout</button></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>

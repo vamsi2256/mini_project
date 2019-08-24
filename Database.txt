@@ -1,0 +1,4 @@
+create table acharana1(username varchar2(50),
+password varchar2(50),address varchar2(50),
+email varchar2(50),phone varchar2(50),
+blood varchar2(20),age varchar2(10),status varchar2(10));

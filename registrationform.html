@@ -1,0 +1,207 @@
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+
+* { font-weight:bold; position:relative;}
+
+td { color:black; }
+
+input[type=text],input[type=number],input[type=email],input[type=password],input[type=tel],input[type=textarea] 
+{
+
+height:15px;width:250px;
+color:black; text-align:center;
+border:none;outline:none;
+
+background:rgba(255,255,255,0);
+border-bottom:1.5px solid black;
+}
+
+
+
+.container {
+position:relative;
+height:550px; width:350px;
+display:inline-block;
+padding:40px 50px 80px 50px;
+margin-top:-40px;
+background-size:100% 100%;
+border-radius:15px;
+color:black;
+}
+
+
+
+body {
+  margin: 0;
+  font-family:courier, sans-serif;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #283747;
+}
+
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 4px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button {
+    background-color: #4CAF50; 
+    border: none;
+	cursor:pointer;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+	border-radius:17px;
+	
+}
+.image{
+height:50px;
+width:50px;
+}
+</style>
+
+</head>
+
+<body background=".\img7.jpg" style="background-size:cover;">
+
+<div class="topnav"  style="padding-left:65%;font-size:30px;height:8vh;position:relative;font-family:bold;">
+
+<button class="button" onclick="window.location.href='./registrationform.html'">Register as Student</button>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button class="button" onclick="window.location.href='./reg.html'">Register as Visitor</button>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+</div>
+<br><a href="index.html"><img class="image" src="./back.jpg"></img></a><br>
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<I><font face="courier" size="6" color="white"><b>"Welcome To The Acharana Organization"</b>
+
+</FONT></I>
+
+<i>
+<font face="courier" size="6" color="white"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Donate <br><br> &nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;Blood <br><br>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; save <br><br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Life....!
+</font></i>
+<div align=right style="position:relative;margin-top:-5px;margin-left:300px;top:-250px;background:rgba(255,255,255,0.5);border:2px solid black;border-radius:25px;display:inline-block;">
+<br>
+<form action="./insertion.jsp" method="post" class="container" name="f1" onsubmit="return validate();">
+<table>
+<tr>
+<caption><h2 style="color:white;background-color:black;padding:5px 5px 5px 5px;"><b>REGISTRATION FORM</b></h2></caption><br>
+</tr>
+<tr>
+<td> <br>Name </td>
+<td> <br>: </td>
+<td> <br><input type="text" name="uname" pattern="[A-Z a-z .]{4,50}" required="required">  </td>
+</tr>
+<tr>
+<td><br>Reg-No </td>
+<td> <br>: </td>
+<td> <br><input type="text" name="reg" required="required">  </td>
+</tr>
+<tr>
+<td><br>Address</td>
+<td><br>: </td>
+<td> <br><input type="text" name="txt" required="required"> </td>
+</tr>
+<tr>
+<td><br>District</td>
+<td><br>: </td>
+<td> <br><input type="text" name="dst" required="required"> </td>
+</tr>
+<tr>
+<td><br>Pincode</td>
+<td><br>: </td>
+<td> <br><input type="text" name="pin" required="required"> </td>
+</tr>
+<tr>
+<td><br>Phone Number </td>
+<td><br>: </td>
+<td><br><input type="tel" name="pnum" pattern="[6|7|8|9]{1}[0-9]{9}" required="required"> </td>
+</tr>
+<tr>
+<td><br>Email id </td>
+<td><br>: </td>
+<td><br><input type="email" name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="email" required> </td>
+</tr>
+<tr><br><td class="BLOOD" ><br>BLOOD GROUP</td>
+<td><br>:</td>
+          <td><input type = "text" list = "BLOOD" name="bg1" pattern="([AaBbOo]|[Aa][Bb])[\+-]" placeholder="Blood Group" required> 
+     <datalist id = "BLOOD">
+        <option value = "A+">
+        <option value = "A-">
+        <option value = "B+">
+        <option value = "B-">
+        <option value = "O+">
+         <option value = "O-">
+        <option value = "AB+">
+        <option value = "AB-">  
+      </datalist></td>  </tr>
+
+<tr>
+<td><br>age</td>
+<td><br>:</td>
+<td><br> <input type="number" size="6" name="age1" min="18" max="99" placeholder="enter age"><br>
+</tr><br>
+<tr>
+<td><br>Gender </td>
+<td><br>:</td>
+<td width="35px"><br>
+<input type="radio" name="Status" value="male" required="required">Male
+<input type="radio" name="Status" value="female" required="required">Female
+<input type="radio" name="Status" value="others" required="required">Others
+</td>
+</tr>
+<tr>
+<td colspan=2 align="center">
+ &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; <div style="width:-3px;"/>
+<input class="button" type="submit" value="SignUp" id="signUp"/>  
+</td>
+<td>  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
+<div style="margin-left:70px;"/>
+<input class="button" type="reset" value="Reset" id="reset" />  
+</td>
+</tr>
+</div>
+</table>
+</form>
+</div>
+</body>
+</html>
+
